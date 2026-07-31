@@ -1,0 +1,24 @@
+# PHP files
+*.php
+
+# Directories to exclude
+admin/
+data/
+inc/
+templates/
+backup/
+
+# Sensitive files
+data/users.json
+
+# JSON data files removed (not needed for static site)
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo

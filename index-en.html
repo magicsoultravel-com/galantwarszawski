@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galant Warszawski - Old Warsaw Cuisine</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles-scrolly.css"> 
+    <link rel="stylesheet" href="assets/styles-modal.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+<header>
+
+<button class="floating-button" id="toggle-modal-btn">Menu</button>
+
+<div class="modal-overlay" id="modal-overlay" style="display: none;">
+  <div class="modal-content a4-modal">
+    <span id="close-modal" style="position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 24px; font-weight: bold;">x</span>
+    <div id="category-container"></div>
+
+    <div class="pagination">
+      <button id="prev-page" class="pagination-btn">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <span id="page-counter"></span>
+      <button id="next-page" class="pagination-btn">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="top-banner">
+    <div class="logo-container">
+        
+        <a href="#" class="logo-link" title="Return to Top">
+            <img src="assets/img/logo.png" 
+                 alt="Site Logo" 
+                 class="logo"
+                 onerror="this.onerror=null; this.src='https://placehold.co/150x40/4f46e5/ffffff?text=LOGO';">
+        </a>
+    </div>    
+    <div class="edge-text">
+    <nav>
+    <div style="text-align: left;">
+
+    <a href="javascript:void(0)" onclick="toggleMenuModal()" class="navigation__link"><h2>Menu</h2></a>
+    <a href="#contact" class="navigation__link"><h2>Reservations</h2></a>
+    <a href="#location" class="navigation__link"><h2>Location</h2></a>
+    </div>
+    <div style="text-align: right;">
+    <a href="index.html">🇵🇱</a>&nbsp;
+    <a href="index-en.html">🇬🇧</a>
+    </div>
+    </nav>
+    </div>
+    </div>
+    </div>
+
+</header>
+<main>
+
+<section id="scrollytelling">
+
+<div class="scroll-image" aria-hidden="true">
+<img id="scrolly-image" src="assets/img/1.jpg" alt="Scene image">
+</div>
+
+<div class="scroll-text">
+<div class="step" data-img="assets/img/1.jpg">
+
+<h2>Welcome</h2>
+<div class="cms-body">
+<p>Galant Warszawski is a place created from a passion for tradition and respect for Polish culinary culture. Our specialty is Old Polish cuisine—authentic, exquisite, and inspired by historical recipes, which we revive in a modern interpretation. <br><br>In the elegant interior of the restaurant, we combine exceptional flavors with a high standard of service, creating an atmosphere ideal for both everyday lunches and formal dinners.<br><br></p>
+
+<p>Galant Warszawski – the taste of tradition in the heart of Warsaw.</p>
+</div>
+
+<h2>Open hours</h2>
+<div class="cms-body">
+<p>Tue to Sun: 11am - 10pm<br>
+Monday closed</p>
+</div>
+
+</div>
+
+<div class="step" data-img="assets/img/2.jpg">
+<a id="contact"></a>
+<h2>Reservations</h2>
+<div class="cms-body">
+<p><br>Tel: (+48) 22 890 70 42<br><br>
+
+We have a professionally equipped conference room, perfectly suited for the organization of:<br><br>
+
+ • business meetings,<br>
+ • training sessions and presentations,<br>
+ • special events and private parties.<br><br>
+
+We provide comprehensive service, organizational flexibility, and an individual approach to every client.</p>
+</div>
+</div>
+
+<div class="step" data-img="assets/img/3.jpg">
+
+<a id="location"></a>
+<h2>Location</h2>
+<div class="cms-body">
+<p>"Galant Warszawski" Restaurant<br><br>
+
+Ul. Swiętokrzyska 32<br><br>
+
+00-116 Warszawa<br><br><br></p>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4887.1372428749155!2d20.998504114466524!3d52.2330547087358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecde1eb35fa97%3A0x5bd58fac56caab87!2sGalant%20Warszawski!5e0!3m2!1sen!2spl!4v1761685045459!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</p>
+</div>
+</div>
+
+<script src="assets/scrollytelling.js"></script>
+
+<script src="assets/menu-modal.js"></script>
+
+<script src="assets/main.js"></script>
+
+</section>
+
+</main>
+<footer>
+
+<p>
+<a href="#" style="color: #d0bf08;">"Galant Warszawski" Restaurant</a><br>
+Tue to Sun: 11am - 10pm<br>
+Monday closed<br>
+Ul. Swiętokrzyska 32<br>
+Reservations: (+48) 22 890 70 42<br>
+<p>&copy; <span id="current-year"></span> <a href="#" style="color: #d0bf08;">galantwarszawski.pl</a></p>
+        
+</footer>
+</body>
+</html>

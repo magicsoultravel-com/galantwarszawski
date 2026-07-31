@@ -1,0 +1,166 @@
+/* Modal Styles (Restored) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #1a1a1a;
+    color: #f2f2f2;
+    padding: 20px;
+    width: 800px;
+    min-width: 500px;
+    min-height: 200px;
+    max-width: 95%;
+    max-height: 85vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.6), -8px -8px 16px rgba(45, 45, 45, 0.4);
+}
+
+.modal-textarea {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    resize: both;
+    background: #1a1a1a;
+    color: #f2f2f2;
+    border: none;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.6), inset -3px -3px 6px rgba(45, 45, 45, 0.4);
+}
+
+.resizer-handle {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    cursor: se-resize;
+}
+
+.modal-buttons {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.modal-button {
+    background: #1a1a1a;
+    color: #f2f2f2;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.6), -4px -4px 8px rgba(45, 45, 45, 0.4);
+}
+
+.modal-button:hover {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.6), -2px -2px 4px rgba(45, 45, 45, 0.4);
+}
+
+.modal-status {
+    margin-left: 10px;
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Pagination button fixes */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.pagination-btn {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    transition: background 0.2s;
+}
+
+.pagination-btn:hover:not(.active) {
+    background: #e5e5e5;
+}
+
+.pagination-btn.active {
+    background: #0073aa;
+    color: white;
+    border-color: #0073aa;
+}
+
+.pagination-btn svg {
+    width: 32px;
+    height: 32px;
+    stroke: #333;
+    stroke-width: 2;
+    fill: none;
+}
+
+#page-counter {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #f2f2f2;
+}
+
+/* Menu item fixes - prevent price wrapping */
+#category-container li {
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px dotted #555;
+}
+
+#category-container li > div {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 10px;
+}
+
+#category-container li > div > span:first-child {
+    flex: 1;
+    min-width: 0;
+    word-wrap: break-word;
+}
+
+#category-container li > div > span:last-child {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-style: italic;
+    color: #ccc;
+}
+
+#category-container p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-style: italic;
+    color: #aaa;
+    font-size: 0.95em;
+    text-align: left;
+}
