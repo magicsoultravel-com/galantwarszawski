@@ -90,6 +90,12 @@ function renderCategory() {
     title.textContent = currentCategory[`name_${currentLang}`] || currentCategory.name_en;
     container.appendChild(title);
 
+    // Add decorative divider
+    const divider = document.createElement('div');
+    divider.className = 'ornament-divider';
+    divider.textContent = '❦';
+    container.appendChild(divider);
+
     const ul = document.createElement('ul');
 
     products.forEach(product => {
