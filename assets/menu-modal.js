@@ -108,7 +108,6 @@ function renderCategory() {
             const price = document.createElement('span');
             price.textContent = `${product.price} zł`;
             price.style.fontStyle = 'italic';
-            price.style.color = '#ccc';
 
             line.appendChild(name);
             line.appendChild(price);
@@ -120,7 +119,6 @@ function renderCategory() {
                 desc.textContent = descText;
                 desc.style.margin = '5px 0 0 0';
                 desc.style.fontStyle = 'italic';
-                desc.style.color = '#aaa';
                 desc.style.fontSize = '0.95em';
                 desc.style.textAlign = 'left';
                 li.appendChild(desc);
