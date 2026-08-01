@@ -1,4 +1,4 @@
-/* Modal Styles (Restored) */
+/* Modal Styles */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -107,17 +107,13 @@
     box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
-.modal-button:hover {
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.6), -2px -2px 4px rgba(45, 45, 45, 0.4);
-}
-
 .modal-status {
     margin-left: 10px;
     font-style: italic;
     color: #6d5a45;
 }
 
-/* Pagination button fixes */
+/* Pagination */
 .pagination {
     display: flex;
     justify-content: center;
@@ -170,25 +166,21 @@
     font-weight: bold;
 }
 
-/* Menu item fixes - prevent price wrapping */
+/* Menu items */
+#category-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 #category-container li {
     text-align: left;
-    padding: 12px 0;
+    padding: 10px 0;
     border-bottom: 1px dotted #8b7355;
-    position: relative;
 }
 
 #category-container li:last-child {
     border-bottom: none;
-}
-
-/* Ornamental bullet points for menu items */
-#category-container li::before {
-    content: '•';
-    color: #8b7355;
-    font-size: 1.2em;
-    margin-right: 8px;
-    font-weight: bold;
 }
 
 #category-container li > div {
@@ -224,16 +216,6 @@
     font-size: 0.95em;
     text-align: left;
     font-family: 'Georgia', 'Times New Roman', serif;
-    padding-left: 20px;
-    position: relative;
-}
-
-/* Decorative flourish before descriptions */
-#category-container p::before {
-    content: '—';
-    color: #8b7355;
-    margin-right: 8px;
-    font-style: normal;
 }
 
 #category-container h1 {
@@ -242,23 +224,11 @@
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     border-bottom: 2px solid #8b7355;
     text-shadow: 1px 1px 2px rgba(139, 115, 85, 0.3);
     position: relative;
     z-index: 2;
-}
-
-/* Ornamental divider below title */
-#category-container h1::after {
-    content: '❦ ❦ ❦';
-    display: block;
-    text-align: center;
-    font-size: 0.4em;
-    color: #8b7355;
-    margin-top: 8px;
-    letter-spacing: 8px;
-    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
 .close-button {
@@ -284,88 +254,4 @@
 
 .close-button:hover {
     color: #3e2723;
-}
-
-/* Decorative corner ornaments for modal */
-.modal-content {
-    background: linear-gradient(135deg, #f4e4bc 0%, #e8d4a8 50%, #dcc89a 100%);
-    color: #3e2723;
-    padding: 20px;
-    width: 800px;
-    min-width: 500px;
-    min-height: 200px;
-    max-width: 95%;
-    max-height: 85vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4), inset 0 0 80px rgba(139, 115, 85, 0.15);
-    border: 2px solid #8b7355;
-}
-
-/* Corner decorations */
-.modal-content > .corner-ornament {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #8b7355;
-    opacity: 0.4;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.corner-ornament.top-left {
-    top: 10px;
-    left: 10px;
-    border-right: none;
-    border-bottom: none;
-    border-radius: 4px 0 0 0;
-}
-
-.corner-ornament.top-right {
-    top: 10px;
-    right: 10px;
-    border-left: none;
-    border-bottom: none;
-    border-radius: 0 4px 0 0;
-}
-
-.corner-ornament.bottom-left {
-    bottom: 10px;
-    left: 10px;
-    border-right: none;
-    border-top: none;
-    border-radius: 0 0 0 4px;
-}
-
-.corner-ornament.bottom-right {
-    bottom: 10px;
-    right: 10px;
-    border-left: none;
-    border-top: none;
-    border-radius: 0 0 4px 0;
-}
-
-/* Decorative leaf/floral ornaments */
-.ornament-divider {
-    text-align: center;
-    color: #8b7355;
-    font-size: 1.2em;
-    letter-spacing: 10px;
-    margin: 15px 0;
-    opacity: 0.6;
-    font-family: 'Georgia', 'Times New Roman', serif;
-}
-
-/* Elegant double-line border effect for menu items */
-#category-container li {
-    background: linear-gradient(to right, 
-        transparent 0%, 
-        transparent 10px, 
-        rgba(139, 115, 85, 0.03) 10px, 
-        rgba(139, 115, 85, 0.03) calc(100% - 10px), 
-        transparent calc(100% - 10px), 
-        transparent 100%);
 }
