@@ -1,0 +1,363 @@
+/* ========================================================== */
+/* ======== GFX TUNER (Cog Icon + Filter Popup) ============== */
+/* ========================================================== */
+
+/* --- Subtle Cog Icon in Footer --- */
+.gfx-cog {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    color: #d0bf08;
+    opacity: 0.45;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.4s ease;
+    border: none;
+    background: transparent;
+    padding: 0;
+    line-height: 0;
+}
+
+.gfx-cog:hover {
+    opacity: 1;
+    transform: rotate(60deg);
+}
+
+.gfx-cog:focus-visible {
+    outline: 2px solid #d0bf08;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* --- Popup Window --- */
+.gfx-popup {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 10001;
+    width: 360px;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: rgba(26, 26, 26, 0.96);
+    border: 1px solid #8b7355;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(139, 115, 85, 0.08);
+    color: #f2f2f2;
+    font-family: var(--font-body-family, 'Tahoma', sans-serif);
+    text-align: left;
+}
+
+.gfx-popup.show {
+    display: block;
+    animation: gfx-pop-in 0.25s ease-out;
+}
+
+@keyframes gfx-pop-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gfx-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #8b7355;
+}
+
+.gfx-popup-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.gfx-popup-title {
+    font-size: 1.1em;
+    color: #d0bf08;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.gfx-pin-btn {
+    background: transparent;
+    border: none;
+    color: #8b7355;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 4px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.gfx-pin-btn:hover {
+    color: #d0bf08;
+}
+
+.gfx-pin-btn.active {
+    color: #d0bf08;
+    transform: rotate(-45deg);
+}
+
+.gfx-pin-btn:focus-visible {
+    outline: 2px solid #d0bf08;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.gfx-popup-close {
+    background: transparent;
+    border: none;
+    color: #8b7355;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 4px;
+    transition: color 0.2s;
+}
+
+.gfx-popup-close:hover {
+    color: #d0bf08;
+}
+
+.gfx-popup-label {
+    display: block;
+    font-size: 0.85em;
+    color: #ccc;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.gfx-popup select {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 0.9em;
+    color: #f2f2f2;
+    background: #1a1a1a;
+    border: 1px solid #8b7355;
+    border-radius: 6px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23d0bf08' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+.gfx-popup select:focus {
+    outline: none;
+    border-color: #d0bf08;
+    box-shadow: 0 0 0 2px rgba(208, 191, 8, 0.2);
+}
+
+.gfx-popup select option {
+    background: #1a1a1a;
+    color: #f2f2f2;
+}
+
+/* --- CSS Filters (applied to target elements) --- */
+
+/* Vintage / Old Photo: sepia + low contrast + slight fade */
+.gfx-filter-vintage #scrollytelling .scroll-image img,
+.gfx-filter-vintage .modal-content {
+    filter: sepia(0.55) contrast(0.82) brightness(0.92) saturate(0.7);
+}
+
+/* Black & White */
+.gfx-filter-bw #scrollytelling .scroll-image img,
+.gfx-filter-bw .modal-content {
+    filter: grayscale(1);
+}
+
+/* Sepia */
+.gfx-filter-sepia #scrollytelling .scroll-image img,
+.gfx-filter-sepia .modal-content {
+    filter: sepia(0.85) saturate(1.1);
+}
+
+/* Warm amber */
+.gfx-filter-warm #scrollytelling .scroll-image img,
+.gfx-filter-warm .modal-content {
+    filter: sepia(0.35) saturate(1.6) hue-rotate(-10deg) brightness(1.05);
+}
+
+/* Cool moonlight */
+.gfx-filter-cool #scrollytelling .scroll-image img,
+.gfx-filter-cool .modal-content {
+    filter: grayscale(0.25) sepia(0.1) hue-rotate(180deg) saturate(0.8) brightness(0.95);
+}
+
+/* Smooth transition when switching filters */
+#scrollytelling .scroll-image img,
+.modal-content {
+    transition: filter 0.6s ease;
+}
+
+/* Mobile: keep popup within screen */
+@media (max-width: 900px) {
+    .gfx-popup {
+        right: 10px;
+        left: 10px;
+        width: auto;
+        bottom: 80px;
+    }
+}
+
+/* ========================================================== */
+/* ======== FONT TUNER CONTROLS (in popup) ================== */
+/* ========================================================== */
+
+.gfx-section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #8b7355, transparent);
+    margin: 16px 0;
+}
+
+.gfx-font-group {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #333;
+}
+
+.gfx-font-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.gfx-font-group-title {
+    font-size: 0.8em;
+    color: #d0bf08;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* Font dropdown row */
+.gfx-font-select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 0.85em;
+    color: #f2f2f2;
+    background: #1a1a1a;
+    border: 1px solid #8b7355;
+    border-radius: 6px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23d0bf08' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+.gfx-font-select:focus {
+    outline: none;
+    border-color: #d0bf08;
+    box-shadow: 0 0 0 2px rgba(208, 191, 8, 0.2);
+}
+
+.gfx-font-select option {
+    background: #1a1a1a;
+    color: #f2f2f2;
+}
+
+/* Actions row: size +/- + color picker */
+.gfx-actions-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.gfx-size-control {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.gfx-size-control button {
+    flex: 0 0 auto;
+    width: 32px;
+    height: 28px;
+    padding: 0;
+    background: #1a1a1a;
+    border: 1px solid #8b7355;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.gfx-size-control button:hover {
+    background: #2a2a2a;
+    border-color: #d0bf08;
+}
+
+.gfx-size-control button:active {
+    background: #333;
+}
+
+.gfx-size-control button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.gfx-size-value {
+    flex: 0 0 auto;
+    min-width: 50px;
+    text-align: center;
+    font-size: 0.85em;
+    color: #ccc;
+    font-family: 'Tahoma', sans-serif;
+}
+
+/* Color picker - visible native color input */
+.gfx-color-input {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 28px;
+    border: 1px solid #8b7355;
+    border-radius: 4px;
+    background: #1a1a1a;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Reset button */
+.gfx-reset-btn {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 0.85em;
+    color: #f2f2f2;
+    background: linear-gradient(135deg, #8b7355 0%, #6d5a45 100%);
+    border: 1px solid #5d4a35;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: 8px;
+}
+
+.gfx-reset-btn:hover {
+    background: linear-gradient(135deg, #9c8b6e 0%, #7d6a55 100%);
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.gfx-reset-btn:active {
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.3);
+}

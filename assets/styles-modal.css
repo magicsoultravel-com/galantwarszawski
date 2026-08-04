@@ -10,8 +10,8 @@
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #f4e4bc 0%, #e8d4a8 50%, #dcc89a 100%);
-    color: #3e2723;
+    background: var(--modal-bg, linear-gradient(135deg, #f4e4bc 0%, #e8d4a8 50%, #dcc89a 100%));
+    color: var(--font-modal-color, #3e2723);
     padding: 20px;
     width: 800px;
     min-width: 500px;
@@ -63,11 +63,11 @@
     height: 100%;
     resize: both;
     background: #f4e4bc;
-    color: #3e2723;
+    color: var(--font-modal-color, #3e2723);
     border: 1px solid #8b7355;
     padding: 10px;
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 14px;
+    font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
+    font-size: var(--font-modal-size, 14px);
     box-sizing: border-box;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -99,7 +99,8 @@
     cursor: pointer;
     font-weight: 600;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
+    font-size: var(--font-modal-size, 14px);
 }
 
 .modal-button:hover {
@@ -160,9 +161,9 @@
 
 #page-counter {
     margin: 0 10px;
-    font-size: 14px;
+    font-size: var(--font-modal-size, 14px);
     color: #3e2723;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
     font-weight: bold;
 }
 
@@ -195,16 +196,16 @@
     flex: 1;
     min-width: 0;
     word-wrap: break-word;
-    font-family: 'Georgia', 'Times New Roman', serif;
-    color: #3e2723;
+    font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
+    color: var(--font-modal-color, #3e2723);
 }
 
 #category-container li > div > span:last-child {
     flex-shrink: 0;
     white-space: nowrap;
     color: #6d5a45;
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 0.9em;
+    font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
+    font-size: calc(var(--font-modal-size, 14px) * 0.9);
 }
 
 #category-container p {
@@ -212,13 +213,13 @@
     margin-bottom: 0;
     font-style: italic;
     color: #6d5a45;
-    font-size: 0.95em;
+    font-size: calc(var(--font-modal-size, 14px) * 0.95);
     text-align: left;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
 }
 
 #category-container h1 {
-    font-family: 'Petit Formal Script', cursive;
+    font-family: var(--font-heading-family, 'Petit Formal Script', cursive);
     color: #5d4037;
     font-size: 2.5em;
     text-align: center;
@@ -238,7 +239,7 @@
     font-size: 28px;
     font-weight: bold;
     color: #5d4037;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
     z-index: 10;
     transition: color 0.2s;
     background: transparent;

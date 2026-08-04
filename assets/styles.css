@@ -11,10 +11,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Tahoma", sans-serif;
-    font-size: 22px;
+    font-family: var(--font-body-family, "Tahoma", sans-serif);
+    font-size: var(--font-body-size, 22px);
     line-height: 1.6;
-    color: #f2f2f2;
+    color: var(--font-body-color, #f2f2f2);
     text-align: center;
     background-color: #1a1a1a;
     overflow-x: hidden;
@@ -50,18 +50,18 @@ main {
 
 /* Typography */
 h1, h2, h3, h4, h5 {
-    font-family: 'Petit Formal Script', cursive;    
+    font-family: var(--font-heading-family, 'Petit Formal Script', cursive);    
     font-weight: 500;
     margin-top: 0.2em;
     margin-bottom: 0.6em;
-    color: #d0bf08
+    color: var(--font-heading-color, #d0bf08)
 }
 
-h1 { font-size: 2em; }
-h2 { font-size: 1.8em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.3em; }
-h5 { font-size: 1.0em; }
+h1 { font-size: calc(var(--font-heading-scale, 1) * 2em); }
+h2 { font-size: calc(var(--font-heading-scale, 1) * 1.8em); }
+h3 { font-size: calc(var(--font-heading-scale, 1) * 1.5em); }
+h4 { font-size: calc(var(--font-heading-scale, 1) * 1.3em); }
+h5 { font-size: calc(var(--font-heading-scale, 1) * 1em); }
 
 p {
     margin-top: 2em;
@@ -366,7 +366,7 @@ th[data-sort] {
   align-items:center;
   gap:.4rem;
   font-size:14px;
-  color:#d0bf08;
+  color:var(--font-nav-color, #d0bf08);
   text-decoration:none;
   padding:6px 8px;
   border-radius:6px;
@@ -374,10 +374,10 @@ th[data-sort] {
 }
 .navigation__link h2 {
     /* Use the desired Google Font here, e.g., 'Parisienne' */
-    font-family: 'Verdana', sans-serif;
+    font-family: var(--font-nav-family, 'Verdana', sans-serif);
     /* Override the large default h2 size and margins */
-    font-size: 1.4em;
-    color:#d0bf08;
+    font-size: calc(var(--font-nav-scale, 1) * 1.4em);
+    color:var(--font-nav-color, #d0bf08);
 }
 
 /* MOBILE FIXES (<= 900px) */
@@ -386,16 +386,16 @@ th[data-sort] {
 {
     
     body {
-        font-size: 14px;
+        font-size: var(--font-body-size, 14px);
         line-height: 1.4;
     }
 
     /* Reduce headings proportionally */
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.6em; }
-    h3 { font-size: 1.3em; }
-    h4 { font-size: 1.1em; }
-    h5 { font-size: 1em; }
+    h1 { font-size: calc(var(--font-heading-scale, 1) * 2em); }
+    h2 { font-size: calc(var(--font-heading-scale, 1) * 1.6em); }
+    h3 { font-size: calc(var(--font-heading-scale, 1) * 1.3em); }
+    h4 { font-size: calc(var(--font-heading-scale, 1) * 1.1em); }
+    h5 { font-size: calc(var(--font-heading-scale, 1) * 1em); }
 
     /* 1. Header/Footer are generally okay outside of main, but reduce padding */
     header, footer {
