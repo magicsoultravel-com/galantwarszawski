@@ -1,0 +1,270 @@
+/* ========================================================== */
+/* ======== PAGE TRANSITIONS & SUBPAGE LAYOUT ================ */
+/* ========================================================== */
+
+/* --- Page transition wrapper --- */
+#page-transition-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* --- Transition effect classes (used by page-transitions.js) --- */
+
+/* Fade */
+.pt-out-fade {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.pt-in-fade {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Slide (direction depends on navigation) */
+.pt-out-slide-left {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+.pt-out-slide-right {
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+.pt-in-slide {
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+}
+
+/* Fade + Scale */
+.pt-out-fade-scale {
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.pt-in-fade-scale {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Slide + Fade */
+.pt-out-slide-fade-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.pt-out-slide-fade-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.pt-in-slide-fade {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Flip (3D) */
+.pt-out-flip {
+    transform: rotateY(-90deg);
+    transition: transform 0.5s ease;
+}
+.pt-in-flip {
+    transform: rotateY(0);
+    transition: transform 0.5s ease;
+}
+
+/* --- Loading overlay --- */
+.pt-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(26, 26, 26, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+.pt-loading.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.pt-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(208, 191, 8, 0.3);
+    border-top-color: #d0bf08;
+    border-radius: 50%;
+    animation: pt-spin 1s linear infinite;
+}
+@keyframes pt-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- Subpage layout (same visual as horizontal mode) --- */
+#scrollytelling.subpage-layout {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#scrollytelling.subpage-layout .scroll-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    margin: 0;
+}
+
+#scrollytelling.subpage-layout .scroll-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+#scrollytelling.subpage-layout .scroll-text {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Single step on subpages — always visible */
+#scrollytelling.subpage-layout .step {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none !important;
+    width: 90%;
+    max-width: 720px;
+    max-height: 84vh;
+    overflow-y: auto;
+    margin: 0 !important;
+    padding: 2.5rem;
+    text-align: left;
+    background: rgba(26, 26, 26, 0.78) !important;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Arrow buttons for subpage navigation */
+#scrollytelling.subpage-layout .gfx-h-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    width: 56px;
+    height: 76px;
+    padding: 0;
+    border: 1px solid rgba(208, 191, 8, 0.6);
+    background: rgba(26, 26, 26, 0.65);
+    color: #d0bf08;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+#scrollytelling.subpage-layout .gfx-h-arrow:hover {
+    background: rgba(26, 26, 26, 0.9);
+    border-color: #d0bf08;
+}
+#scrollytelling.subpage-layout .gfx-h-arrow-prev { left: 16px; }
+#scrollytelling.subpage-layout .gfx-h-arrow-next { right: 16px; }
+
+/* Dot indicators for subpage navigation */
+#scrollytelling.subpage-layout .gfx-h-dots {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    display: flex;
+    gap: 12px;
+    padding: 8px 14px;
+    background: rgba(26, 26, 26, 0.55);
+    border-radius: 24px;
+}
+#scrollytelling.subpage-layout .gfx-h-dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 1px solid #d0bf08;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+#scrollytelling.subpage-layout .gfx-h-dot:hover {
+    transform: scale(1.25);
+}
+#scrollytelling.subpage-layout .gfx-h-dot.active {
+    background: #d0bf08;
+    transform: scale(1.25);
+}
+
+/* Mobile tweaks for subpage layout */
+@media (max-width: 600px) {
+    #scrollytelling.subpage-layout .gfx-h-arrow {
+        width: 44px;
+        height: 60px;
+        font-size: 26px;
+    }
+    #scrollytelling.subpage-layout .gfx-h-arrow-prev { left: 8px; }
+    #scrollytelling.subpage-layout .gfx-h-arrow-next { right: 8px; }
+    #scrollytelling.subpage-layout .gfx-h-dots { bottom: 20px; }
+}
+
+/* --- Transition effect classes for horizontal mode steps --- */
+/* These override the default fade+scale in styles-gfx.css */
+
+/* Fade only */
+.layout-transition-fade .step {
+    transition: opacity 0.5s ease, visibility 0.5s ease !important;
+}
+.layout-transition-fade .step {
+    transform: translate(-50%, -50%) !important;
+}
+.layout-transition-fade .step.active {
+    transform: translate(-50%, -50%) !important;
+}
+
+/* Slide only */
+.layout-transition-slide .step {
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease !important;
+}
+
+/* Slide+Fade */
+.layout-transition-slide-fade .step {
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease !important;
+}
+
+/* Flip */
+.layout-transition-flip .step {
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease !important;
+}

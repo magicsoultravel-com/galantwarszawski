@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location - Galant Warszawski</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles-scrolly.css">
+    <link rel="stylesheet" href="assets/styles-modal.css">
+    <link rel="stylesheet" href="assets/styles-gfx.css">
+    <link rel="stylesheet" href="assets/styles-transitions.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+<header>
+
+<button class="floating-button" id="toggle-modal-btn">Menu</button>
+
+<div class="modal-overlay" id="modal-overlay" style="display: none;">
+  <div class="modal-content a4-modal">
+    <span id="close-modal" class="close-button">×</span>
+    <div id="category-container"></div>
+
+    <div class="pagination">
+      <button id="prev-page" class="pagination-btn">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <span id="page-counter"></span>
+      <button id="next-page" class="pagination-btn">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="top-banner">
+    <div class="logo-container">
+        <a href="index-en.html" class="logo-link" title="Return to Top">
+            <img src="assets/img/logo.png"
+                 alt="Site Logo"
+                 class="logo"
+                 onerror="this.onerror=null; this.src='https://placehold.co/150x40/4f46e5/ffffff?text=LOGO';">
+        </a>
+    </div>
+    <div class="edge-text">
+    <nav>
+    <div style="text-align: left;">
+    <a href="javascript:void(0)" onclick="toggleMenuModal()" class="navigation__link"><h2>Menu</h2></a>
+    <a href="rezerwacje-en.html" class="navigation__link"><h2>Reservations</h2></a>
+    <a href="lokalizacja-en.html" class="navigation__link"><h2>Location</h2></a>
+    </div>
+    <div style="text-align: right;">
+<a href="index.html">🇵🇱</a>&nbsp;
+<a href="index-en.html">🇬🇧</a>&nbsp;
+<a href="index-fr.html">🇫🇷</a>&nbsp;
+<a href="index-es.html">🇪🇸</a>
+    </div>
+    </nav>
+    </div>
+    </div>
+    </div>
+
+</header>
+<main>
+
+<div id="page-transition-wrapper">
+
+<section id="scrollytelling" class="subpage-layout">
+
+<div class="scroll-image" aria-hidden="true">
+<img id="scrolly-image" src="assets/img/3.jpg" alt="Location scene">
+</div>
+
+<div class="scroll-text">
+<div class="step" data-img="assets/img/3.jpg">
+
+<h2>Location</h2>
+<div class="cms-body">
+<p>Restauracja "Galant Warszawski"<br><br>
+
+ul. Swiętokrzyska 32  (corner of Emilii Plater St.)<br><br>
+
+00-116 Warsaw, Sródmieście<br><br><br></p>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4887.1372428749155!2d20.998504114466524!3d52.2330547087358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecde1eb35fa97%3A0x5bd58fac56caab87!2sGalant%20Warszawski!5e0!3m2!1sen!2spl!4v1761685045459!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+</div>
+
+<div class="step" data-img="assets/img/1.jpg">
+
+<h2>Opening Hours</h2>
+<div class="cms-body">
+<p>Mon: Closed<br>
+Tue-Sun: 11:00 - 22:00</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="assets/scrollytelling.js"></script>
+<script src="assets/menu-modal.js"></script>
+<script src="assets/main.js"></script>
+<script src="assets/gfx-tuner.js"></script>
+<script src="assets/page-transitions.js"></script>
+
+</main>
+<footer>
+
+<p>
+<a href="index-en.html" style="color: #d0bf08;">Restauracja "Galant Warszawski"</a><br>
+Tue-Sun: 11:00 - 22:00<br>
+Monday closed<br>
+ul. Swiętokrzyska 32<br>
+Reservations: (+48) 22 890 70 42<br>
+<p>&copy; <span id="current-year"></span> <a href="index-en.html" style="color: #d0bf08;">galantwarszawski.pl</a></p>
+
+</footer>
+</body>
+</html>

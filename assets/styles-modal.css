@@ -67,7 +67,7 @@
     border: 1px solid #8b7355;
     padding: 10px;
     font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
-    font-size: var(--font-modal-size, 14px);
+    font-size: calc(var(--font-modal-scale, 1) * 14px);
     box-sizing: border-box;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -100,7 +100,7 @@
     font-weight: 600;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
     font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
-    font-size: var(--font-modal-size, 14px);
+    font-size: calc(var(--font-modal-scale, 1) * 14px);
 }
 
 .modal-button:hover {
@@ -161,7 +161,7 @@
 
 #page-counter {
     margin: 0 10px;
-    font-size: var(--font-modal-size, 14px);
+    font-size: calc(var(--font-modal-scale, 1) * 14px);
     color: #3e2723;
     font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
     font-weight: bold;
@@ -205,7 +205,7 @@
     white-space: nowrap;
     color: #6d5a45;
     font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
-    font-size: calc(var(--font-modal-size, 14px) * 0.9);
+    font-size: calc(var(--font-modal-scale, 1) * 12.6px);
 }
 
 #category-container p {
@@ -213,7 +213,7 @@
     margin-bottom: 0;
     font-style: italic;
     color: #6d5a45;
-    font-size: calc(var(--font-modal-size, 14px) * 0.95);
+    font-size: calc(var(--font-modal-scale, 1) * 13.3px);
     text-align: left;
     font-family: var(--font-modal-family, 'Georgia', 'Times New Roman', serif);
 }

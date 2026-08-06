@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Galant Warszawski</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/styles-scrolly.css">
+    <link rel="stylesheet" href="assets/styles-modal.css">
+    <link rel="stylesheet" href="assets/styles-gfx.css">
+    <link rel="stylesheet" href="assets/styles-transitions.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+<header>
+
+<button class="floating-button" id="toggle-modal-btn">Menu</button>
+
+<div class="modal-overlay" id="modal-overlay" style="display: none;">
+  <div class="modal-content a4-modal">
+    <span id="close-modal" class="close-button">×</span>
+    <div id="category-container"></div>
+
+    <div class="pagination">
+      <button id="prev-page" class="pagination-btn">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <span id="page-counter"></span>
+      <button id="next-page" class="pagination-btn">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="top-banner">
+    <div class="logo-container">
+        <a href="index-en.html" class="logo-link" title="Return to Top">
+            <img src="assets/img/logo.png"
+                 alt="Site Logo"
+                 class="logo"
+                 onerror="this.onerror=null; this.src='https://placehold.co/150x40/4f46e5/ffffff?text=LOGO';">
+        </a>
+    </div>
+    <div class="edge-text">
+    <nav>
+    <div style="text-align: left;">
+    <a href="javascript:void(0)" onclick="toggleMenuModal()" class="navigation__link"><h2>Menu</h2></a>
+    <a href="rezerwacje-en.html" class="navigation__link"><h2>Reservations</h2></a>
+    <a href="lokalizacja-en.html" class="navigation__link"><h2>Location</h2></a>
+    </div>
+    <div style="text-align: right;">
+<a href="index.html">🇵🇱</a>&nbsp;
+<a href="index-en.html">🇬🇧</a>&nbsp;
+<a href="index-fr.html">🇫🇷</a>&nbsp;
+<a href="index-es.html">🇪🇸</a>
+    </div>
+    </nav>
+    </div>
+    </div>
+    </div>
+
+</header>
+<main>
+
+<div id="page-transition-wrapper">
+
+<section id="scrollytelling" class="subpage-layout">
+
+<div class="scroll-image" aria-hidden="true">
+<img id="scrolly-image" src="assets/img/1.jpg" alt="Menu scene">
+</div>
+
+<div class="scroll-text">
+<div class="step" data-img="assets/img/1.jpg">
+
+<h2>Menu</h2>
+<div class="cms-body">
+<p>Full menu also available in printed version.</p>
+</div>
+
+</div>
+
+<div class="step" data-img="assets/img/2.jpg">
+
+<h2>Appetizers</h2>
+<div class="cms-body">
+<table class="style-table">
+<thead><tr><th>Dish</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td>Herring in oil with onions, Polish style</td><td>25,00 zł</td></tr>
+<tr><td>Herring in cream<br><small style="color:#aaa">With hot potatoes, butter, and chives</small></td><td>30,00 zł</td></tr>
+<tr><td>Beef tartare with accompaniments</td><td>48,00 zł</td></tr>
+<tr><td>Buckwheat pancakes with sour cream</td><td>25,00 zł</td></tr>
+<tr><td>Warsaw-style cold cuts</td><td>28,00 zł</td></tr>
+<tr><td>Salad on delicate leaves with buttery toast</td><td>28,00 zł</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="step" data-img="assets/img/3.jpg">
+
+<h2>Soups</h2>
+<div class="cms-body">
+<table class="style-table">
+<thead><tr><th>Dish</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td>Chicken broth with dumplings</td><td>28,00 zł</td></tr>
+<tr><td>Warsaw-style tripe soup with meatballs</td><td>38,00 zł</td></tr>
+<tr><td>Sour rye soup with egg and pork rib</td><td>38,00 zł</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="step" data-img="assets/img/1.jpg">
+
+<h2>Main Dishes</h2>
+<div class="cms-body">
+<table class="style-table">
+<thead><tr><th>Dish</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td>Goose stomachs with shallots<br><small style="color:#aaa">Rustic bread toast with garlic</small></td><td>58,00 zł</td></tr>
+<tr><td>Minister's chicken schnitzel<br><small style="color:#aaa">Roasted potatoes, honey-glazed carrots or seasonal salad</small></td><td>68,00 zł</td></tr>
+<tr><td>Beef stew with marrow and bacon<br><small style="color:#aaa">Silesian dumplings, fried beets or seasonal salad</small></td><td>75,00 zł</td></tr>
+<tr><td>Country-style beefsteak<br><small style="color:#aaa">Potatoes with dill, fried beets or seasonal salad</small></td><td>75,00 zł</td></tr>
+<tr><td>Pork chop with bone<br><small style="color:#aaa">Potatoes with dill, braised cabbage or cucumber salad with cream</small></td><td>65,00 zł</td></tr>
+<tr><td>Pike in cream sauce<br><small style="color:#aaa">Potatoes with dill, green beans with butter and a roll</small></td><td>75,00 zł</td></tr>
+<tr><td>Dumplings with pork cracklings<br><small style="color:#aaa">Topped with pork cracklings</small></td><td>36,00 zł</td></tr>
+<tr><td>Pyzy po różycku<br><small style="color:#aaa">With bacon or cottage cheese and fried onions</small></td><td>38,00 zł</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="step" data-img="assets/img/2.jpg">
+
+<h2>Drinks</h2>
+<div class="cms-body">
+<table class="style-table">
+<thead><tr><th>Dish</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td>Black tea</td><td>10,00 zł</td></tr>
+<tr><td>Flavored tea<br><small style="color:#aaa">(jasmine, green, fruit)</small></td><td>10,00 zł</td></tr>
+<tr><td>Espresso</td><td>8,00 zł</td></tr>
+<tr><td>Caffè latte</td><td>16,00 zł</td></tr>
+<tr><td>Americano</td><td>10,00 zł</td></tr>
+<tr><td>Flat white</td><td>18,00 zł</td></tr>
+<tr><td>Affogato<br><small style="color:#aaa">Scoop of vanilla ice cream</small></td><td>18,00 zł</td></tr>
+<tr><td>Coca Cola<br><small style="color:#aaa">0.2 l/bottle</small></td><td>12,00 zł</td></tr>
+<tr><td>Fanta<br><small style="color:#aaa">0.2 l/bottle</small></td><td>12,00 zł</td></tr>
+<tr><td>Sprite<br><small style="color:#aaa">0.2 l/bottle</small></td><td>12,00 zł</td></tr>
+<tr><td>Sparkling water<br><small style="color:#aaa">Small bottle</small></td><td>10,00 zł</td></tr>
+<tr><td>Natural juices<br><small style="color:#aaa">0.2 l</small></td><td>12,00 zł</td></tr>
+<tr><td>Bottled juices<br><small style="color:#aaa">0.33 l/bottle</small></td><td>12,00 zł</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="step" data-img="assets/img/3.jpg">
+
+<h2>Desserts</h2>
+<div class="cms-body">
+<table class="style-table">
+<thead><tr><th>Dish</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td>Sultan cream</td><td>25,00 zł</td></tr>
+<tr><td>W - Z cake our way</td><td>22,00 zł</td></tr>
+<tr><td>Ice cream cup</td><td>25,00 zł</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="assets/scrollytelling.js"></script>
+<script src="assets/menu-modal.js"></script>
+<script src="assets/main.js"></script>
+<script src="assets/gfx-tuner.js"></script>
+<script src="assets/page-transitions.js"></script>
+
+</main>
+<footer>
+
+<p>
+<a href="index-en.html" style="color: #d0bf08;">Restauracja "Galant Warszawski"</a><br>
+Tue-Sun: 11:00 - 22:00<br>
+Monday closed<br>
+ul. Swiętokrzyska 32<br>
+Reservations: (+48) 22 890 70 42<br>
+<p>&copy; <span id="current-year"></span> <a href="index-en.html" style="color: #d0bf08;">galantwarszawski.pl</a></p>
+
+</footer>
+</body>
+</html>

@@ -196,9 +196,13 @@
 }
 
 /* Smooth transition when switching filters */
+/* NOTE: 'opacity' is also included so the scrollytelling image
+   fade (fade-out/fade-in classes) keeps animating smoothly.
+   Without it, the later-loaded stylesheet overrides the
+   opacity transition and pictures snap instead of fading. */
 #scrollytelling .scroll-image img,
 .modal-content {
-    transition: filter 0.6s ease;
+    transition: filter 0.6s ease, opacity 0.5s ease;
 }
 
 /* Mobile: keep popup within screen */
@@ -360,4 +364,189 @@
 
 .gfx-reset-btn:active {
     box-shadow: inset 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* ========================================================== */
+/* ======== HORIZONTAL LAYOUT (cog menu option) ============== */
+/* ========================================================== */
+
+/* Horizontal mode: full-viewport slideshow, steps become stacked slides */
+#scrollytelling.layout-horizontal {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#scrollytelling.layout-horizontal .scroll-text {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Slides: only the .active step is visible, with a smooth fade + scale */
+#scrollytelling.layout-horizontal .step {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.96);
+    width: 90%;
+    max-width: 720px;
+    max-height: 84vh;
+    overflow-y: auto;
+    margin: 0 !important;
+    padding: 2.5rem;
+    text-align: left;
+    background: rgba(26, 26, 26, 0.78) !important;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+}
+
+#scrollytelling.layout-horizontal .step.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Keep the fixed background image behaviour from vertical mode */
+#scrollytelling.layout-horizontal .scroll-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    margin: 0;
+}
+
+/* Map iframe (Location step) stays readable on small screens */
+@media (max-width: 700px) {
+    #scrollytelling.layout-horizontal .step iframe {
+        width: 100% !important;
+        height: 250px;
+    }
+}
+
+/* --- Arrow buttons --- */
+.gfx-h-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    width: 56px;
+    height: 76px;
+    padding: 0;
+    border: 1px solid rgba(208, 191, 8, 0.6);
+    background: rgba(26, 26, 26, 0.65);
+    color: #d0bf08;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gfx-h-arrow:hover:not(:disabled) {
+    background: rgba(26, 26, 26, 0.9);
+    border-color: #d0bf08;
+}
+
+.gfx-h-arrow:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+.gfx-h-arrow-prev {
+    left: 16px;
+}
+
+.gfx-h-arrow-next {
+    right: 16px;
+}
+
+.gfx-h-arrow-prev:hover:not(:disabled) {
+    transform: translateY(-50%) translateX(-4px);
+}
+
+.gfx-h-arrow-next:hover:not(:disabled) {
+    transform: translateY(-50%) translateX(4px);
+}
+
+/* --- Dot indicators --- */
+.gfx-h-dots {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    display: flex;
+    gap: 12px;
+    padding: 8px 14px;
+    background: rgba(26, 26, 26, 0.55);
+    border-radius: 24px;
+}
+
+.gfx-h-dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 1px solid #d0bf08;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.gfx-h-dot:hover {
+    transform: scale(1.25);
+}
+
+.gfx-h-dot.active {
+    background: #d0bf08;
+    transform: scale(1.25);
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+    .gfx-h-arrow {
+        width: 44px;
+        height: 60px;
+        font-size: 26px;
+    }
+    .gfx-h-arrow-prev { left: 8px; }
+    .gfx-h-arrow-next { right: 8px; }
+    .gfx-h-dots { bottom: 20px; }
+}
+
+/* Override subpage-layout step styles when in horizontal mode */
+#scrollytelling.subpage-layout.layout-horizontal .step {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(0.96) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease !important;
+}
+
+#scrollytelling.subpage-layout.layout-horizontal .step.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(-50%, -50%) scale(1) !important;
 }
