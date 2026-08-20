@@ -1,0 +1,20 @@
+[
+    {
+        "slug": "menu",
+        "type": "modal",
+        "target": "toggleMenuModal()",
+        "order": 1
+    },
+    {
+        "slug": "contact",
+        "type": "link",
+        "target": "#contact",
+        "order": 2
+    },
+    {
+        "slug": "location",
+        "type": "link",
+        "target": "#location",
+        "order": 3
+    }
+]

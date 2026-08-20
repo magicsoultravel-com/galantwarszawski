@@ -1,0 +1,146 @@
+[
+    {
+        "index": 1,
+        "date": "2025-08-25",
+        "title_en": "Home",
+        "content_en": "",
+        "title_pl": "Strona główna",
+        "content_pl": "",
+        "slug": "home"
+    },
+    {
+        "index": 2,
+        "date": "2025-08-25",
+        "title_en": "Welcome",
+        "content_en": "Galant Warszawski is a place created from a passion for tradition and respect for Polish culinary culture. Our specialty is Old Polish cuisine—authentic, exquisite, and inspired by historical recipes, which we revive in a modern interpretation. <br><br>In the elegant interior of the restaurant, we combine exceptional flavors with a high standard of service, creating an atmosphere ideal for both everyday lunches and formal dinners.<br><br>\r\n\r\nGalant Warszawski – the taste of tradition in the heart of Warsaw.",
+        "title_pl": "Witamy",
+        "content_pl": "Galant Warszawski to miejsce stworzone z pasji do tradycji i szacunku dla polskiej kultury kulinarnej. Nasza specjalność to kuchnia staropolska – autentyczna, wykwintna i inspirowana historycznymi recepturami, które przywracamy w nowoczesnej odsłonie. <br><br>W eleganckim wnętrzu restauracji łączymy wyjątkowy smak z wysokim standardem obsługi, tworząc atmosferę idealną zarówno do codziennego lunchu, jak i uroczystych kolacji. <br><br>\r\n\r\nGalant Warszawski – smak tradycji w sercu Warszawy.",
+        "slug": "about"
+    },
+    {
+        "index": 3,
+        "date": "2025-08-25",
+        "title_en": "Menu",
+        "content_en": "",
+        "title_pl": "Menu",
+        "content_pl": "",
+        "slug": "menu"
+    },
+    {
+        "index": 4,
+        "date": "2025-08-25",
+        "title_en": "Gallery",
+        "content_en": "",
+        "title_pl": "Galeria",
+        "content_pl": "",
+        "slug": "gallery"
+    },
+    {
+        "index": 5,
+        "date": "2025-08-25",
+        "title_en": "News",
+        "content_en": "",
+        "title_pl": "Aktualności",
+        "content_pl": "",
+        "slug": "news"
+    },
+    {
+        "index": 6,
+        "date": "2025-08-25",
+        "title_en": "Events",
+        "content_en": "",
+        "title_pl": "Wydarzenia",
+        "content_pl": "",
+        "slug": "events"
+    },
+    {
+        "index": 7,
+        "date": "2025-08-25",
+        "title_en": "Reservations",
+        "content_en": "<br>Tel: (+48) 22 890 70 42\r\n<br><br>We have a professionally equipped conference room, perfectly suited for the organization of:<br><br>\r\n • business meetings,<br>\r\n • training sessions and presentations,<br>\r\n • special events and private parties.<br><br>\r\nWe provide comprehensive service, organizational flexibility, and an individual approach to every client.",
+        "title_pl": "Rezerwacje",
+        "content_pl": "<br>Tel: (+48) 22 890 70 42<br><br>\r\nDysponujemy profesjonalnie wyposażoną salą konferencyjną, doskonale przystosowaną do organizacji:<br><br>\r\n • spotkań biznesowych,<br>\r\n • szkoleń i prezentacji,<br>\r\n • wydarzeń okolicznościowych i przyjęć zamkniętych.<br><br>\r\nZapewniamy kompleksową obsługę, elastyczność organizacyjną oraz indywidualne podejście do każdego klienta.",
+        "slug": "contact"
+    },
+    {
+        "index": 8,
+        "date": "2025-08-25",
+        "title_en": "Menu",
+        "content_en": "Menu",
+        "title_pl": "Karta dań i napojów",
+        "content_pl": "Menu",
+        "slug": "label1"
+    },
+    {
+        "index": 9,
+        "date": "2025-08-25",
+        "title_en": "Close",
+        "content_en": "Close",
+        "title_pl": "Zamknij",
+        "content_pl": "Zamknij",
+        "slug": "label2"
+    },
+    {
+        "index": 10,
+        "date": "2025-08-25",
+        "title_en": "test content manager",
+        "content_en": "this<br>is<br>4<br>lines",
+        "title_pl": "Test menaderza tresci",
+        "content_pl": "test menadzera tresci",
+        "slug": "test-content-manager"
+    },
+    {
+        "index": 11,
+        "date": "2025-08-25",
+        "title_en": "Welcome",
+        "content_en": "Galant Warszawski is a place with soul, dedicated to exceptional and atmospheric old Warsaw cuisine.",
+        "title_pl": "Zapraszamy",
+        "content_pl": "Galant Warszawski to miejsce z duszą, poświęcone wyjątkowej i klimatycznej kuchni starowarszawskiej.",
+        "slug": "welcome"
+    },
+    {
+        "index": 12,
+        "date": "2025-08-25",
+        "title_en": "Location",
+        "content_en": "\"Galant Warszawski\" Restaurant<br><br>\r\nUl. Swiętokrzyska 32<br><br>\r\n00-116 Warszawa<br><br><br>",
+        "title_pl": "Lokalizacja",
+        "content_pl": "Restauracja \"Galant Warszawski\"<br><br>\r\nUl. Swiętokrzyska 32  (róg ul. Emilii Plater)<br><br>\r\n00-116 Warszawa Sródmieście<br><br><br>",
+        "slug": "location"
+    },
+    {
+        "index": 13,
+        "date": "2025-08-25",
+        "title_en": "Thank you",
+        "content_en": "Thank you and see you soon",
+        "title_pl": "Dziękujemy",
+        "content_pl": "Dziękujemy i zapraszamy wkrótce",
+        "slug": "thank-you"
+    },
+    {
+        "index": 14,
+        "date": "2025-08-25",
+        "title_en": "Old Warsaw Cuisine",
+        "content_en": "\"Galant Warszawski\" restaurant - old Warsaw cuisine, polish restaurant, traditional",
+        "title_pl": "Kuchnia Starowarszawska",
+        "content_pl": "Restauracja Galant Warszawski - kuchnia starowarszawska, polska, tradycyjna",
+        "slug": "site-title"
+    },
+    {
+        "index": 15,
+        "date": "2025-08-27",
+        "title_en": "Open hours",
+        "content_en": "Tue to Sun: 11am - 10pm<br>\r\nMonday closed",
+        "title_pl": "Godziny otwarcia",
+        "content_pl": "Wt-Nd: 11:00 - 22:00<br>\r\nPoniedziałek zamknięte",
+        "slug": "open-hours"
+    },
+    {
+        "index": 16,
+        "date": "2025-10-28",
+        "title_en": "Short",
+        "content_en": "\"Galant Warszawski\" Restaurant<br>\r\nTue to Sun: 11am - 10pm<br>\r\nMonday closed<br>\r\nUl. Swiętokrzyska 32<br>\r\nReservations: (+48) 22 890 70 42",
+        "title_pl": "Short",
+        "content_pl": "Restauracja \"Galant Warszawski\"<br>\r\nWt-Nd: 11:00 - 22:00<br>\r\nPoniedziałek zamknięte<br>\r\nUl. Swiętokrzyska 32<br>\r\nRezerwacje: (+48) 22 890 70 42",
+        "slug": "short"
+    }
+]

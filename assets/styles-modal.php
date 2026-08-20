@@ -1,0 +1,83 @@
+<?php header("Content-type: text/css"); ?>
+
+/* Modal Styles (Restored) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #1a1a1a;
+    color: #f2f2f2;
+    padding: 20px;
+    width: 500px;
+    min-width: 300px;
+    min-height: 200px;
+    max-width: 90%;
+    max-height: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.6), -8px -8px 16px rgba(45, 45, 45, 0.4);
+}
+
+.modal-textarea {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    resize: both;
+    background: #1a1a1a;
+    color: #f2f2f2;
+    border: none;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.6), inset -3px -3px 6px rgba(45, 45, 45, 0.4);
+}
+
+.resizer-handle {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    cursor: se-resize;
+}
+
+.modal-buttons {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.modal-button {
+    background: #1a1a1a;
+    color: #f2f2f2;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.6), -4px -4px 8px rgba(45, 45, 45, 0.4);
+}
+
+.modal-button:hover {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.6), -2px -2px 4px rgba(45, 45, 45, 0.4);
+}
+
+.modal-status {
+    margin-left: 10px;
+    font-style: italic;
+    color: #ccc;
+}

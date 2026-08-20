@@ -1,0 +1,14 @@
+{
+    "a@b.c": {
+        "password": "$2y$12$r19tm7V1xYavfFMLW/kBTe/s0w6JKy7sBC3Q/LoxPyufES/e2LUAy",
+        "verified": true,
+        "admin": true
+    },
+
+    "admin@b.c": {
+	"password": "$2y$12$rCn0mKtrZv7yUYwxmk5aIe.dYEHy19cKVxEEjt3eUT3qRiNi4OLDm",
+	"verified": true,
+	"admin": true
+}
+}
+

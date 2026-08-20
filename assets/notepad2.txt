@@ -1,0 +1,20 @@
+Next steps, improvements
+
+Uruchomic maila
+
+Wyposrodkowac gorne menu
+Dolna stopka
+
+Dalsze moduly i wspolpraca
+ew uwagi 
+
+kolorystyka
+inne zdjecia lub wybrany focus
+
+rozwinac menu: sala godziny ...
+kolejny pasek pod logo i ikonkami jez
+
+Modal: tlo, prezentacja, linie, 
+Sprawdzic tresc PL > sprawdzic tlumaczenia EN
+
+przeniesc login admina poza glowna strone

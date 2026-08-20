@@ -1,0 +1,91 @@
+<?php header("Content-type: text/css"); ?>
+
+/* ========================================================== */
+/* ======== SCROLLYTELLING DESKTOP STYLES (DEFAULT) ========= */
+/* ========================================================== */
+
+/* Ensure main content expands for scrollytelling */
+main:has(#scrollytelling) {
+    max-width: 100vw !important;
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+/* Base Scrollytelling Container */
+#scrollytelling {
+    position: relative;
+    height: auto; /* was 500 Sets desktop scroll space (e.g., 3 steps * 100vh) */
+    box-sizing: border-box; 
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    
+    /* 🛑 Key for smooth fixed elements on some mobile browsers */
+    -webkit-overflow-scrolling: touch; 
+}
+
+/* Fixed Image Column (The sticky part) */
+#scrollytelling .scroll-image {
+    position: fixed; /* Makes it stick */
+    top: 0; 
+    left: 0;
+    height: 100vh;
+    width: 100vw; 
+    overflow: hidden;
+    z-index: -1; /* Pushed behind the body content */
+    margin: 0 !important;
+    transform: translate3d(0, 0, 0); /* GLITCH FIX: Forces GPU rendering */
+    display: block; /* Ensure it's always shown on desktop */
+}
+
+/* Image scaling to cover the full viewport */
+#scrollytelling .scroll-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures zoom/auto-adjust to fill the screen */
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+/* Fade effect */
+#scrollytelling .scroll-image img.fade-out {
+    opacity: 0;
+}
+
+#scrollytelling .scroll-image img.fade-in {
+    opacity: 1;
+}
+
+/* Text Column (The scrollable content) */
+#scrollytelling .scroll-text {
+    width: 90%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 0 2rem; 
+    z-index: 20; /* Ensures text is on top of the fixed image */
+    position: relative; 
+    text-align: left;
+    color: #f2f2f2;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Steps - defining the scroll distance on desktop */
+#scrollytelling .step {
+    margin: 60vh 0; /* Creates 100vh of space between steps on desktop */
+    padding: 3rem; 
+    
+    /* Readability background */
+    background: rgba(26, 26, 26, 0.7) !important; 
+    border-radius: 0px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+/* First step adjustment */
+#scrollytelling .step:first-of-type {
+  margin: 20vh 0 60vh 0 !important;
+}
+}

@@ -1,0 +1,474 @@
+<?php header("Content-type: text/css"); ?>
+
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Courgette|Herr+Von+Muellerhoff|Petit+Formal+Script|Alex+Brush&display=swap');
+
+/* Global Responsiveness Failsafe */
+* {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Base & Layout */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Tahoma", sans-serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #f2f2f2;
+    text-align: center;
+    background-color: #1a1a1a;
+overflow-x: hidden;
+}
+
+iframe {
+  width: 600px;
+  height: 450px;
+}
+
+/* Header and Footer are positioned relative and above all content */
+header, footer {
+    position: relative; 
+    z-index: 100; 
+   background-color: rgba(26, 26, 26, 0.8);
+    color: #f2f2f2;
+    text-align: center;
+    border-radius: 0;
+    max-width: 100vw; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 20px;
+    margin: 0 auto;
+    position: relative; 
+    z-index: 1;
+}
+
+
+/* Typography */
+h1, h2, h3, h4, h5 {
+font-family: 'Petit Formal Script', cursive;    
+font-weight: 500;
+    margin-top: 0.2em;
+    margin-bottom: 0.6em;
+    color: #d0bf08
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.3em; }
+h5 { font-size: 1.0em; }
+
+p {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: #ddd;
+}
+
+a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.6), inset -3px -3px 6px rgba(45, 45, 45, 0.4);
+}
+
+th, td {
+    padding: 10px;
+    border: none;
+    text-align: left;
+    color: #e6e6e6;
+}
+
+th {
+    background: #1a1a1a;
+    color: #f2f2f2;
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.6), inset -3px -3px 6px rgba(45, 45, 45, 0.4);
+}
+
+/* Regular Buttons */
+button {
+    font-family: inherit;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    background: #1a1a1a;
+    color: #f2f2f2;
+    font-weight: 600;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.6), -4px -4px 8px rgba(45, 45, 45, 0.4);
+}
+
+button:hover {
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.6), -2px -2px 4px rgba(45, 45, 45, 0.4);
+}
+
+.active-tool {
+    box-shadow: inset 4px 4px 8px rgba(0,0,0,0.6), inset -4px -4px 8px rgba(45, 45, 45, 0.4);
+}
+
+/* Footer Specific Styles */
+footer .bottom-login-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px solid #444; 
+}
+footer .login-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+
+/* Language Navigation Fix */
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; 
+    gap: 5px;
+    padding: 10px 0;
+}
+
+/* Floating Buttons */
+
+.notepad-button, .floating-button {
+    position: fixed;
+    bottom: 20px;
+    z-index: 10000;
+    background: #1a1a1a;
+    border: none;
+    padding: 15px 20px;
+    color: #f2f2f2;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.6), -4px -4px 12px rgba(45, 45, 45, 0.4);
+}
+
+.notepad-button:hover, .floating-button:hover {
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.6), -2px -2px 6px rgba(45, 45, 45, 0.4);
+}
+
+.notepad-button {
+    right: 20px;
+}
+.floating-button {
+    right: 20px;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+/* A4 modal window */
+.a4-modal {
+    width: 210mm;
+    height: 297mm;
+    max-width: 90%;
+    max-height: 90vh;
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+/* Separator under article titles */
+.cms-article h2,
+.cms-article h3,
+.cms-article h4,
+.cms-article h5 {
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Tool-specific Styles */
+
+.style-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.style-table th, .style-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+    vertical-align: top;
+}
+.style-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+}
+.message {
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.copy-btn {
+    margin-left: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+#category-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#category-container li {
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px dotted #555;
+}
+#category-container li:last-child {
+    border-bottom: none;
+}
+#category-container p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+/* Pagination Layout */
+.pagination {
+    /* Use Flexbox for centering and horizontal alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+/* Pagination Buttons (Base Style) */
+.pagination-btn {
+    /* Base reset for button appearance */
+    background: transparent;
+    border: none;
+    /* Spacing and visual parameters */
+    padding: 10px;
+    cursor: pointer;
+    /* The second set of styles provides more detail/override */
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    border-radius: 3px;
+}
+
+/* Pagination Button SVG Icon Style */
+.pagination-btn svg {
+    /* Ensures SVG icons inside buttons inherit the text color */
+    stroke: currentColor;
+}
+
+/* Page Counter Display */
+#page-counter {
+    /* Spacing for the current page display */
+    margin: 0 10px;
+}
+
+/* Active Page Button */
+.pagination-btn.active {
+    /* Distinct style for the current page indicator */
+    background: #0073aa; /* Blue background */
+    color: white;
+    border-color: #0073aa;
+}
+
+/* Hover State for Non-Active Buttons */
+.pagination-btn:hover:not(.active) {
+    /* Light grey background change on hover */
+    background: #e5e5e5;
+}
+
+/* Sorting Icons (Restored) */
+th[data-sort] {
+    cursor: pointer;
+    user-select: none;
+}
+
+.sort-icon {
+    display: inline-block;
+    width: 1em;
+}
+
+
+/* --- TOP BANNER STYLES --- */
+#top-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 60px; 
+    backdrop-filter: blur(5px);
+    box-sizing: border-box; 
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 60px; 
+    width: auto;
+}
+.edge-text {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+}
+.navigation__link{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  font-size:14px;
+  color:#d0bf08;
+  text-decoration:none;
+  padding:6px 8px;
+  border-radius:6px;
+  margin:0 10px; /* leading/trailing gap for every link */
+}
+.navigation__link h2 {
+    /* Use the desired Google Font here, e.g., 'Parisienne' */
+    font-family: 'Verdana', sans-serif;
+   /* Override the large default h2 size and margins */
+    font-size: 1.4em;
+color:#d0bf08;
+}
+
+/* MOBILE FIXES (<= 900px) */
+
+@media (max-width: 900px) 
+{
+    
+    body {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    /* Reduce headings proportionally */
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.6em; }
+    h3 { font-size: 1.3em; }
+    h4 { font-size: 1.1em; }
+    h5 { font-size: 1em; }
+
+    /* 1. Header/Footer are generally okay outside of main, but reduce padding */
+    header, footer {
+        padding: 10px 10px;
+        /* Ensure they fill full width on small screens */
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    /* 2. Keep image and text elements fixed/relative, but control Z-index */
+    
+    /* 3. Increase Z-Index for mobile content to prevent flickering */
+    #scrollytelling .scroll-text {
+        /* Ensure text is firmly on top of the fixed image */
+        z-index: 10 !important; 
+    }
+    
+    /* 4. Reduce large margins and padding to fit mobile screens */
+#scrollytelling .step { 
+    padding: 1rem; 
+    font-size: 1em;
+   
+}
+
+.navigation__link {font-size:8px;padding:8px 4px;}
+
+/* First step adjustment */
+
+#scrollytelling .step:first-child {
+    margin-top: 20vh !important; /* override mobile step margin */
+    margin-bottom: 60vh !important; /* match other steps for scroll effect */
+}
+    
+
+
+/* 5. Fine-tune image behavior on mobile */
+    
+#scrollytelling .scroll-image {
+        /* Keep fixed position, but ensure it's slightly behind the steps */
+        z-index: 1; /* Must be less than scroll-text's z-index (10) */
+    }
+    
+/* 6. Mobile header size adjustment */
+
+#top-banner {
+        padding: 0 10px;
+    }
+.logo {
+    height: 40px; 
+    width: auto;
+}
+  iframe {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+
+
+
+/* Emergency fix for footer overlay */
+footer {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.a4-modal {
+    z-index: 9999 !important; /* Even higher than modal overlay */
+    position: relative;
+}
+
+:target {
+    scroll-margin-top: 140px;
+}
+html {
+    /* Enables a smooth animation when scrolling to anchor links (#id) */
+    scroll-behavior: smooth;
+}
+
+
+
